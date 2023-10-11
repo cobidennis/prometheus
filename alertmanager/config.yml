@@ -1,10 +1,13 @@
 route:
+  group_by: ['alertname']
+  group_wait: 10s
+  group_interval: 10s
+  repeat_interval: 1h
   receiver: 'slack'
 
 receivers:
   - name: 'slack'
-#       slack_configs:
-#           - send_resolved: true
-#             username: '<username>'
-#             channel: '#<channel-name>'
-#             api_url: '<incomming-webhook-url>'
+    slack_configs:
+      - api_url: 'https://tech-trainingteam.slack.com/services/B05S11Y89R8?settings=1' # Replace with your Slack Incoming Webhook URL
+        channel: '#sapphire-masterclass' # Specify the Slack channel where alerts will be sent
+        send_resolved: true # Send resolved alerts to Slack as well
