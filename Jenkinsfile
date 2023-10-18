@@ -25,6 +25,7 @@ pipeline {
 
                     if (keyFileExists) {
                         echo "AWS Key File Exists. Proceeding to the next stage."
+                        sh "chmod 400 workspace/DobeeP53.pem"
                     } else {
                         error "AWS Key File Not Found. Aborting the pipeline."
                     }
