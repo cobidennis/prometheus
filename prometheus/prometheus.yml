@@ -42,7 +42,7 @@ scrape_configs:
     scrape_interval: 15s
 
     static_configs:
-      - targets: ['cadvisor:8080', '54.154.49.106:8080', '52.31.106.250:8080']
+      - targets: ['cadvisor:8080', '63.32.89.11:8080', '54.155.130.191:8080']
 
   - job_name: 'node-exporter'
 
@@ -50,4 +50,4 @@ scrape_configs:
     scrape_interval: 15s
   
     static_configs:
-      - targets: ['node-exporter:9100', '54.154.49.106:9100', '52.31.106.250:9100']
+      - targets: ['node-exporter:9100', '63.32.89.11:9100', '54.155.130.191:9100']
